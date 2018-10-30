@@ -21,3 +21,7 @@
   <vi-cell title="vi-upload" desc="文件上传插件" link="/pages/viUpload/index"></vi-cell>
   <vi-cell title="vi-abnormal-tips" desc="异常流信息提示" link="/pages/viAbnormalTips/index"></vi-cell>
 </vi-cell-group>
+
+<vi-cell-group title="表单组件">
+  <vi-cell title="vi-radio" desc="单选框" link="/pages/viRadio/index"></vi-cell>
+</vi-cell-group>

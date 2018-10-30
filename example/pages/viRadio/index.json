@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "vi-title": "/components/viTitle/index",
+    "component-exhibition": "/components/componentExhibition/index",
+    "vi-radio": "vi-radio",
+    "vi-radio-group": "vi-radio-group"
+  }
+}

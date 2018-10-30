@@ -1,0 +1,7 @@
+<!--miniprogram_npm/vi-radio/index.wxml-->
+<view class="radio">
+  <text class="icon icon-icfeedbacksuccessblack" style="color:#0aba07" wx:if="{{checked && !disabled}}" bindtap='changeChecked'></text>
+  <text class="icon icon-circleo" style="color: #ccc" bindtap='changeChecked' wx:elif="{{!checked && !disabled}}"></text>
+  <text class="icon icon-icfeedbacksuccessblack" style="color:#ccc" wx:if="{{disabled}}"></text>
+  <text>{{text}}</text>
+</view>

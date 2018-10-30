@@ -11,7 +11,10 @@
     "pages/viUpload/index",
     "pages/viQuantity/index",
     "pages/viMotion/index",
-    "pages/viSliderMenu/index"
+    "pages/viSliderMenu/index",
+    "pages/viRadio/index",
+    "miniprogram_npm/vi-radio/index",
+    "miniprogram_npm/vi-radio-group/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

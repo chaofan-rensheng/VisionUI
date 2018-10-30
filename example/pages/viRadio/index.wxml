@@ -1,0 +1,10 @@
+<!--pages/viRadio/index.wxml-->
+<vi-title>VI-RADIO</vi-title>
+<component-exhibition code="{{codeArr[0]}}">
+  <view class="radioDemo">
+    <view class="radioDemo__title">基本用法</view>
+    <vi-radio-group>
+      <vi-radio></vi-radio>
+    </vi-radio-group>
+  </view>
+</component-exhibition>

@@ -1,0 +1,7 @@
+/* pages/viRadio/index.wxss */
+.radioDemo{
+  padding: 20rpx;
+}
+.radioDemo>view{
+  margin: 20rpx 0rpx;
+}
