@@ -26,9 +26,7 @@
 }
 
 .radio{
-  display: flex;
-  align-items: center;
-  margin-top: 10rpx;
+  display: inline-block;
 }
 .radio__circle{
   display: inline-block;

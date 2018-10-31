@@ -105,33 +105,36 @@ module.exports =
 
 
 Component({
+  relations: {
+    '../vi-radio-group/index': {
+      type: 'parent', // 关联的目标节点应为子节点
+      linked: function (target) {
+        console.log('vi-radio-group linked', target)
+      },
+      linkChanged: function (target) {
+        console.log('vi-radio-group linkChanged', target)
+      },
+      unlinked: function (target) {
+        console.log('vi-radio-group unlinked', target)
+      }
+    }
+  },
   options: {
     multipleSlots: true
   },
   properties:{
-    text: {
-      type: String,
-      value: '单选框1'
-    },
-    checked: {
-      type: Boolean,
-      value: true
-    },
-    disabled: {
-      type: Boolean,
-      value: false
-    },
-    value: {
-      type: [String, Object],
-      value: ''
-    }
+    value: null,
+    name: null,
+    disabled: Boolean,
   },
   methods:{
-    changeChecked(){
-      this.setData({
-        checked: !this.data.checked
-      })
-    }
+    emitChange(value){
+      var instance = this.getRelationNodes('../vi-radio-group/index')[0] || this;
+      instance.triggerEvent('change', value);
+    },
+    radioChange(event){
+      this.emitChange(event.detail.value);
+    },
   }
 })
 

@@ -2,9 +2,9 @@
 <vi-title>VI-RADIO</vi-title>
 <component-exhibition code="{{codeArr[0]}}">
   <view class="radioDemo">
-    <view class="radioDemo__title">基本用法</view>
-    <vi-radio-group>
-      <vi-radio></vi-radio>
-    </vi-radio-group>
+    <vi-radio-group title="基本用法" value="{{value}}" bind:change="onChange" disabled="{{false}}">{{value}}
+      <vi-radio name="{{1}}"  ></vi-radio>
+      <vi-radio name="{{2}}"  ></vi-radio>
+    </vi-radio-group>  
   </view>
 </component-exhibition>

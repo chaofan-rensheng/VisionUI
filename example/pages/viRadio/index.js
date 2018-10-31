@@ -6,15 +6,19 @@ Page({
    */
   data: {
     codeArr: require('./md.js'),
+    value: 1
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
 
   },
-
+  onChange(value){
+    this.setData({
+      value: value.detail
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

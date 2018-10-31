@@ -103,15 +103,50 @@ module.exports =
 
         "use strict";
         /***/
+    const { watch, computed } = require('./../../utils/watch.js')      
   Component({
+    relations: {
+      '../vi-radio/index': {
+        type: 'child', // 关联的目标节点应为子节点
+        linked: function (target) {
+          console.log(this.data.value)
+          this.getRelationNodes('../vi-radio/index').forEach(child => {
+            child.setData({
+              disabled: this.data.disabled,
+              value: this.data.value
+            })
+          })
+        },
+        linkChanged: function (target) {
+          console.log('vi-radio linkChanged', target)
+        },
+        unlinked: function (target) {
+          console.log('vi-radio unlinked', target)
+        }
+      }  
+    },
+    
     options: {
       multipleSlots: true
     },
     properties: {
-      title: {
-        type: String,
-        value: '基本用法'
-      }
+      title:String,
+      value: null,
+      disabled: Boolean,
+    },
+    lifetimes: {
+      attached() {
+        watch(this, {
+          value: function (newVal) {
+            this.getRelationNodes('../vi-radio/index').forEach(child => {
+              child.setData({
+                disabled: this.data.disabled,
+                value: newVal
+              })
+            })
+          }
+        })
+      },
     },
     methods: {
 

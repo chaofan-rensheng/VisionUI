@@ -1,4 +1,5 @@
 <!--miniprogram_npm/vi-radio-group/index.wxml-->
 <view class="radioGroup">
   <view class="radioGroup__title">{{title}}</view>
+  <slot/>
 </view>
